@@ -15,7 +15,6 @@ User.create!([{ # create Skater users
                 email: "skater@tord.com",
                 insurance: "WFTDiCanada1234",
                 role: 0,
-                password: "password",
               },
               { # create Trainer users
                 first_name: "Lucille",
@@ -24,7 +23,6 @@ User.create!([{ # create Skater users
                 email: "trainer@tord.com",
                 insurance: "WFTDiCanada8753",
                 role: 1,
-                password: "password1",
               },
               { # create Admin users
                 first_name: "Julienne",
@@ -33,7 +31,6 @@ User.create!([{ # create Skater users
                 email: "admin@tord.com",
                 insurance: "WFTDiCanada7041",
                 role: 2,
-                password: "password2",
               }])
 
 p "Created #{User.count} users"
