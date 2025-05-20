@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  devise_for :users
+  get "users/index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+  devise_for :users, controllers: { sessions: 'devise/passwordless/sessions' }
+  root "users#index"
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
+
+# Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 

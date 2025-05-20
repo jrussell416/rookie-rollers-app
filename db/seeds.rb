@@ -8,7 +8,7 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-User.create!([{ # create Skater user
+User.create!([{ # create Skater users
                 first_name: "Trixie",
                 last_name: "Franklin",
                 phone_number: "647-123-5878",
@@ -17,7 +17,7 @@ User.create!([{ # create Skater user
                 role: 0,
                 password: "password",
               },
-              { # create Trainer user
+              { # create Trainer users
                 first_name: "Lucille",
                 last_name: "Anderson",
                 phone_number: "876-555-8065",
@@ -26,7 +26,7 @@ User.create!([{ # create Skater user
                 role: 1,
                 password: "password1",
               },
-              { # create Admin user
+              { # create Admin users
                 first_name: "Julienne",
                 last_name: "Nonnatus",
                 phone_number: "020-555-8065",
