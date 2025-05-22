@@ -18,6 +18,9 @@
   </head>
 
   <body>
+  <% flash.each do |_type, message| %>
+    <div role="alert"><%= message %></div>
+  <% end %>
     <%= yield %>
   </body>
 </html>
